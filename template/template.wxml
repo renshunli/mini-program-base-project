@@ -1,0 +1,6 @@
+<template name="msgItem">
+  <view>
+    <text class="haha"> 123</text>
+    <text> 321</text>
+  </view>
+</template>
