@@ -7,5 +7,18 @@
         <text class="user-motto">{{motto}}</text>
         <template wx:is="msgItem" data="{{...item}}" />
         <button open-type='getUserInfo' >获取授权</button>
+        <view class="section">
+            <input bindinput="bindGroupName" maxlength="10" placeholder="输入群名称" />
+        </view>
+        <view class="section">
+            <input bindinput="bindCategoryName"  maxlength="10" placeholder="群分类" />
+        </view>
+        <view class="section">
+            <input bindinput="bindIntroduction"  maxlength="10" placeholder="群介绍" />
+        </view>
+        <view>
+            <button id="create" open-type='share' type='primary'>创建群并分享</button>
+            <button id="share" open-type='share' type='primary'>群分享</button>
+        </view>
     </view>
 </view>

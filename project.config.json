@@ -2,7 +2,7 @@
 	"description": "项目配置文件。",
 	"setting": {
 		"urlCheck": false,
-        "es6": true,
+		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true
@@ -21,13 +21,30 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "测试群分享功能",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": "1044",
+					"shareInfo": {
+						"groupName": "测试模拟群0",
+						"shareName": "ReWwwM7s61Y_3DyP3-LJMmBTOFqgUxdY2QfFdz1zdLE@cr4dev",
+						"shareKey": "S8w7BmOqrR2HU5wm4jw80LlENi-QAQKG2y2D-CKX7m2dpyH9SDtLE6ybnHKIpt_feZyiwh3sX5z5AGdu26TYfw~~"
+					}
+				}
+			]
 		}
 	}
 }

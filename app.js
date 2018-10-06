@@ -1,8 +1,25 @@
 //app.js
 var util = require('./utils/util.js');
-var { checkLogin,loginwx } = require('./api/api.js');
+var { checkLogin,loginwx,joinGroup } = require('./api/api.js');
 App({
-    onLaunch() {
+    onLaunch(ops) {
+        //从分享进入项目
+        if(ops.scene == 1044){
+            console.log(ops.shareTicket)
+            console.log("从分享进入的用户")
+            wx.getShareInfo({
+                shareTicket: ops.shareTicket,
+                complete(res){
+                    joinGroup({
+                        sessionKey: wx.getStorageSync("skey"),
+                        ...res,
+                    }).then(res => {
+                        console.log(res);
+                    })
+                    console.log(res)
+                }
+            })
+        }
         //调用API从本地缓存中获取数据
         var logs = wx.getStorageSync('logs') || []
         logs.unshift(Date.now())
